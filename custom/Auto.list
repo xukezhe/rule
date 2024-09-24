@@ -11,3 +11,5 @@ DOMAIN-SUFFIX,api.translate.zvo.cn
 DOMAIN-SUFFIX,docker.com
 DOMAIN-SUFFIX,4khdr.cn
 
+# 匹配数据发起IP(直连)
+SRC-IP-CIDR,47.76.0.0/32
