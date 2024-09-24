@@ -1,0 +1,13 @@
+# 内容：自定义接代理
+
+# 匹配域名关键字(交由Proxy代理服务器组)
+# DOMAIN-KEYWORD,openai
+DOMAIN-KEYWORD,lmweb01
+
+
+# 匹配域名后缀(交由Proxy代理服务器组)
+# DOMAIN-SUFFIX,perplexity.ai
+DOMAIN-SUFFIX,api.translate.zvo.cn
+DOMAIN-SUFFIX,docker.com
+DOMAIN-SUFFIX,4khdr.cn
+
