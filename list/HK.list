@@ -13,7 +13,7 @@
 # 匹配域名关键字(交由Proxy代理服务器组)
 # DOMAIN-KEYWORD,openai
 
-IP-CIDR,47.76.0.0/16,DIRECT #匹配数据目标IP(直连)
+# IP-CIDR,47.76.0.0/16,DIRECT #匹配数据目标IP(直连)
 
 # 匹配域名后缀(交由Proxy代理服务器组)
 # DOMAIN-SUFFIX,perplexity.ai
