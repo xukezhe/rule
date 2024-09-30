@@ -1,0 +1,781 @@
+# 配置头文件
+mixed-port: 7890
+allow-lan: false
+mode: Rule
+log-level: info
+external-controller: 127.0.0.1:9090
+dns:
+    enable: true
+    ipv6: false
+    default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+    - 8.8.8.8
+    - 1.1.1.1
+    fake-ip-range: 198.18.0.1/16
+    use-hosts: true
+    nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+    - 8.8.8.8
+    - 1.1.1.1
+    - 'https://doh.pub/dns-query'
+    - 'https://dns.alidns.com/dns-query'
+    fallback:
+    - 'https://doh.dns.sb/dns-query'
+    - 'https://dns.cloudflare.com/dns-query'
+    - 'https://dns.twnic.tw/dns-query'
+    - 'tls://8.8.4.4:853'
+    fallback-filter:
+      geoip: true
+      ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+
+# 配置头文件
+
+
+# 代理节点集合(代理提供者+远程订阅地址+本地订阅文件)
+proxy-providers:
+ FULL:
+   type: http
+   path: "/etc/openclash/proxies/FULL.yaml"
+   url: (Clash订阅链接)
+   interval: 86400 
+   health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 3600
+
+ 🏳️‍🌈 ALL:
+   type: http
+   path: "/etc/openclash/proxies/ALL.yaml"
+   url: (Clash订阅链接)
+   interval: 86400 
+   exclude-filter: '1.5|1.5倍|1.5x|2.0|2倍|2x|3.0|3倍|3x|4.0|4倍|4x|5.0|5倍|5x'
+   health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 3600
+
+ 🇭🇰 HK:
+   type: http
+   path: "/etc/openclash/proxies/HK.yaml"
+   url: (Clash订阅链接)
+   interval: 86400 
+   filter: '香港|HK|Hong Kong|🇭🇰|HongKong'
+   exclude-filter: '深港|家宽|游戏|剩余|流量|1.5|1.5倍|1.5x|2.0|2倍|2x|3.0|3倍|3x|4.0|4倍|4x|5.0|5倍|5x'
+   health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 3600
+
+ 🇯🇵 JP:
+   type: http
+   path: "/etc/openclash/proxies/JP.yaml"
+   url: (Clash订阅链接)
+   interval: 86400 
+   filter: '日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan'
+   exclude-filter: '深港|家宽|游戏|剩余|流量|1.5|1.5倍|1.5x|2.0|2倍|2x|3.0|3倍|3x|4.0|4倍|4x|5.0|5倍|5x'
+   health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 3600
+
+ 🇸🇬 SG:
+   type: http
+   path: "/etc/openclash/proxies/SG.yaml"
+   url: (Clash订阅链接)
+   interval: 86400 
+   filter: '新加坡|坡|狮城|SG|Singapore'
+   exclude-filter: '深港|家宽|游戏|剩余|流量|1.5|1.5倍|1.5x|2.0|2倍|2x|3.0|3倍|3x|4.0|4倍|4x|5.0|5倍|5x'
+   health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 3600
+
+ 🇺🇲 US:
+   type: http
+   path: "/etc/openclash/proxies/US.yaml"
+   url: (Clash订阅链接)
+   interval: 86400 
+   filter: '美国|纽约|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|美|US|United States'
+   exclude-filter: '深港|家宽|游戏|剩余|流量|1.5|1.5倍|1.5x|2.0|2倍|2x|3.0|3倍|3x|4.0|4倍|4x|5.0|5倍|5x'
+   health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 3600
+
+ 🇨🇳 TW:
+   type: http
+   path: "/etc/openclash/proxies/TW.yaml"
+   url: (Clash订阅链接)
+   interval: 86400 
+   filter: 'TW|台湾|彰化|taiwan'
+   exclude-filter: '深港|家宽|游戏|剩余|流量|1.5|1.5倍|1.5x|2.0|2倍|2x|3.0|3倍|3x|4.0|4倍|4x|5.0|5倍|5x'
+   health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 3600
+
+ 🎥 NFTV:
+   type: http
+   path: "/etc/openclash/proxies/NF.yaml"
+   url: (Clash订阅链接)
+   interval: 86400 
+   filter: 'NF|奈飞|解锁|Netflix|NETFLIX|Media'
+   exclude-filter: '深港|家宽|游戏|剩余|流量|1.5|1.5倍|1.5x|2.0|2倍|2x|3.0|3倍|3x|4.0|4倍|4x|5.0|5倍|5x'
+   health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 3600
+
+ 🏁 OTHER:
+   type: http
+   path: "/etc/openclash/proxies/OTHER.yaml"
+   url: (Clash订阅链接)
+   interval: 86400 
+   exclude-filter: '香港|HK|Hong Kong|🇭🇰|HongKong|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan|新加坡|坡|狮城|SG|Singapore|美国|纽约|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|美|US|United States|TW|台湾|彰化|taiwan|深港|家宽|游戏|剩余|流量|1.5|1.5倍|1.5x|2.0|2倍|2x|3.0|3倍|3x|4.0|4倍|4x|5.0|5倍|5x'
+   health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 3600
+
+# 查询截止日期和剩余流量
+ 🍀 QUERY:
+   type: http
+   path: "/etc/openclash/proxies/QUERY.yaml"
+   url: (Clash订阅链接)
+   interval: 86400 
+   filter: '剩余|流量'
+   health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 3600
+
+# 一些特殊的节点
+ 🎉 SPECIAL:
+   type: http
+   path: "/etc/openclash/proxies/SPECIAL.yaml"
+   url: (Clash订阅链接)
+   interval: 86400 
+   filter: '深港|家宽|游戏'
+   exclude-filter: '|1.5|1.5倍|1.5x|2.0|2倍|2x|3.0|3倍|3x|4.0|4倍|4x|5.0|5倍|5x'
+   health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 3600
+
+# 多倍节点集合
+ 🚀 MULTIPLE:
+   type: http
+   path: "/etc/openclash/proxies/MULTIPLE.yaml"
+   url: (Clash订阅链接)
+   interval: 86400 
+   filter: '1.5|1.5倍|1.5x|2.0|2倍|2x|3.0|3倍|3x|4.0|4倍|4x|5.0|5倍|5x'
+   health-check:
+     enable: true
+     url: http://www.gstatic.com/generate_204
+     interval: 3600
+# 代理节点集合
+
+
+# 策略组集合
+proxy-groups:
+  - name: 🍀 机场查询
+    type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    use:
+      - 🍀 QUERY
+    proxies:
+      - DIRECT
+
+  - name: 🔰 节点选择
+    type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    use:
+      - 🏳️‍🌈 ALL
+    proxies:
+      - 🔯 自转节点
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇸🇬 狮城节点
+      - 🇨🇳 台湾节点
+      - DIRECT
+
+  - name: 🎯 全球直连
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    proxies:
+      - DIRECT
+
+  - name: 🛑 全球拦截
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    proxies:
+      - REJECT
+
+  - name: 🍃 应用净化
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    proxies:
+      - REJECT
+
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    use:
+      - 🏳️‍🌈 ALL
+    proxies:
+      - 🔯 自转节点
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇸🇬 狮城节点
+      - 🇨🇳 台湾节点
+
+  - name: 🌏 国内媒体
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    proxies:
+      - DIRECT
+
+  - name: 🌍 国外媒体
+    type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    use:
+      - 🇭🇰 HK
+      - 🇯🇵 JP
+      - 🇸🇬 SG
+      - 🇺🇲 US
+      - 🇨🇳 TW
+      - 🏁 OTHER
+    proxies:
+      - 🔯 自转节点
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇸🇬 狮城节点
+      - 🇨🇳 台湾节点
+
+  - name: 📹 YouTube
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    proxies:
+      - 🔯 自转节点
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇸🇬 狮城节点
+      - 🇨🇳 台湾节点
+
+  - name: Ⓜ️ 微软服务
+    type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    use:
+      - 🇭🇰 HK
+      - 🇯🇵 JP
+      - 🇸🇬 SG
+      - 🇺🇲 US
+      - 🇨🇳 TW
+      - 🏁 OTHER
+    proxies:
+      - 🔯 自转节点
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇸🇬 狮城节点
+      - 🇨🇳 台湾节点
+
+  - name: 🍎 Apple
+    type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    use:
+      - 🇭🇰 HK
+      - 🇯🇵 JP
+      - 🇸🇬 SG
+      - 🇺🇲 US
+      - 🇨🇳 TW
+      - 🏁 OTHER
+    proxies:
+      - 🔯 自转节点
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇸🇬 狮城节点
+      - 🇨🇳 台湾节点
+
+  - name: 📢 Google
+    type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    use:
+      - 🇭🇰 HK
+      - 🇯🇵 JP
+      - 🇸🇬 SG
+      - 🇺🇲 US
+      - 🇨🇳 TW
+      - 🏁 OTHER
+    proxies:
+      - 🔯 自转节点
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇸🇬 狮城节点
+      - 🇨🇳 台湾节点
+
+  - name: 🎮 游戏平台
+    type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    use:
+      - 🇭🇰 HK
+      - 🇯🇵 JP
+      - 🇸🇬 SG
+      - 🇺🇲 US
+      - 🇨🇳 TW
+      - 🏁 OTHER
+    proxies:
+      - 🔯 自转节点
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇸🇬 狮城节点
+      - 🇨🇳 台湾节点
+      - DIRECT
+
+  - name: 🎥 Netflix
+    type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    use:
+      -  🎥 NFTV
+    proxies:
+      - 🎥 奈飞自转
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇸🇬 狮城节点
+
+  - name: 📲 Telegram
+    type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    use:
+      - 🇭🇰 HK
+      - 🇯🇵 JP
+      - 🇸🇬 SG
+      - 🇺🇲 US
+      - 🇨🇳 TW
+      - 🏁 OTHER
+    proxies:
+      - 🔯 自转节点
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇸🇬 狮城节点
+      - 🇨🇳 台湾节点
+
+  - name: 🎵 TikTok
+    type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    use:
+      - 🇭🇰 HK
+      - 🇯🇵 JP
+      - 🇸🇬 SG
+      - 🇺🇲 US
+      - 🇨🇳 TW
+      - 🏁 OTHER
+    proxies:
+      - 🔯 自转节点
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇸🇬 狮城节点
+      - 🇨🇳 台湾节点
+
+  - name: 🤖 OpenAI
+    type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    use:
+      - 🇭🇰 HK
+      - 🇯🇵 JP
+      - 🇸🇬 SG
+      - 🇺🇲 US
+      - 🇨🇳 TW
+      - 🏁 OTHER
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇸🇬 狮城节点
+      - 🇨🇳 台湾节点
+
+  - name: 🇭🇰 香港节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    use: 
+      - 🇭🇰 HK
+
+  - name: 🇯🇵 日本节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    use: 
+      - 🇯🇵 JP
+
+  - name: 🇺🇲 美国节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    use: 
+      - 🇺🇲 US
+
+  - name: 🇸🇬 狮城节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    use: 
+      - 🇸🇬 SG
+
+  - name: 🇨🇳 台湾节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    use: 
+      - 🇨🇳 TW
+
+  - name: 🌐 其他节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    use:
+      - 🏁 OTHER
+
+  - name: 🚀 多倍节点
+    type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    use:
+      - 🚀 MULTIPLE
+
+  - name: 🔯 自转节点
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    use:
+      - 🏳️‍🌈 ALL
+
+  - name: 🎥 奈飞自转
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇺🇲 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 狮城节点
+
+  - name: 🔀 负载均衡
+    type: load-balance
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    use:
+      - 🏳️‍🌈 ALL
+
+
+  - name: 🐟 漏网之鱼
+    type: select
+    url: http://www.gstatic.com/generate_204
+    interval: 3600
+    use:
+      - 🏳️‍🌈 ALL
+    proxies:
+      - 🔯 自转节点
+      - 🇭🇰 香港节点
+      - 🇺🇲 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 狮城节点
+      - 🇨🇳 台湾节点
+      - 🌐 其他节点
+      - DIRECT
+
+# 策略组集合
+
+# clash-rules项目提供的规则集
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_LocalAreaNetwork.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml
+    interval: 86400
+  BanAD:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_BanAD.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml
+    interval: 86400
+  BanProgramAD:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_BanProgramAD.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml
+    interval: 86400
+  Download:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_Download.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Download.yaml
+    interval: 86400
+  ChinaIp:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_ChinaIp.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list
+    format: text
+    interval: 86400
+  ChinaDomain:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_ChinaDomain.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaDomain.yaml
+    interval: 86400
+  ChinaMedia:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_ChinaMedia.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaMedia.yaml
+    interval: 86400
+  ProxyGFWlist:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_ProxyGFWlist.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyGFWlist.yaml
+    interval: 86400
+  ProxyMedia:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_ProxyMedia.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyMedia.yaml
+    interval: 86400
+  Bing:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_Bing.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Bing.yaml
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_Microsoft.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Microsoft.yaml
+    interval: 86400
+  OneDrive:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_OneDrive.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/OneDrive.yaml
+    interval: 86400
+  Google:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_Google.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Google.yaml
+    interval: 86400
+  GoogleFCM:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_GoogleFCM.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleFCM.yaml
+    interval: 86400
+  Apple:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_Apple.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Apple.yaml
+    interval: 86400
+  YouTube:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_YouTube.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/YouTube.yaml
+    interval: 86400
+  Epic:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_Epic.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Epic.yaml
+    interval: 86400
+  Nintendo:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_Nintendo.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Nintendo.yaml
+    interval: 86400
+  Origin:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_Origin.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Origin.yaml
+    interval: 86400
+  Sony:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_Sony.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Sony.yaml
+    interval: 86400
+  Steam:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_Steam.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Steam.yaml
+    interval: 86400
+  OpenAi:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_OpenAi.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/OpenAi.yaml
+    interval: 86400
+  Netflix:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_Netflix.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Netflix.yaml
+    interval: 86400
+  NetflixIP:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_NetflixIP.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/NetflixIP.yaml
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_Telegram.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Telegram.yaml
+    interval: 86400
+  TikTok:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_TikTok.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/TikTok.yaml
+    interval: 86400
+  UnBan:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_UnBan.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/UnBan.yaml
+    interval: 86400
+
+  GoogleCN:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_GoogleCN.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/GoogleCN.yaml
+    interval: 86400
+  SteamCN:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_SteamCN.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/SteamCN.yaml
+    interval: 86400
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ACL4SSR_ChinaCompanyIp.yaml"
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/ChinaCompanyIp.yaml
+    interval: 86400
+  ProxyUS:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ProxyUS.yaml"
+    url: https://raw.githubusercontent.com/xukezhe/rule/refs/heads/main/providers/ProxyUS.yaml
+    interval: 86400
+  ProxyHK:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ProxyHK.yaml"
+    url: https://raw.githubusercontent.com/xukezhe/rule/refs/heads/main/providers/ProxyHK.yaml
+    interval: 86400
+  ProxyJP:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ProxyJP.yaml"
+    url: https://raw.githubusercontent.com/xukezhe/rule/refs/heads/main/providers/ProxyJP.yaml
+    interval: 86400
+  ProxySG:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ProxySG.yaml"
+    url: https://raw.githubusercontent.com/xukezhe/rule/refs/heads/main/providers/ProxySG.yaml
+    interval: 86400
+  ProxyDevice:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ProxyDevice.yaml"
+    url: https://raw.githubusercontent.com/xukezhe/rule/refs/heads/main/providers/ProxyDevice.yaml
+    interval: 86400
+  ProxyAuto:
+    type: http
+    behavior: classical
+    path: "/etc/openclash/rule_provider/ProxyAuto.yaml"
+    url: https://raw.githubusercontent.com/xukezhe/rule/refs/heads/main/providers/ProxyAuto.yaml
+    interval: 86400
+
+# 分流规则
+rules:
+    - "RULE-SET,ProxyAuto,♻️ 自动选择"
+    - "RULE-SET,ProxyDevice,🎯 全球直连"
+    - "RULE-SET,ProxyUS,🇺🇲 美国节点"
+    - "RULE-SET,ProxyHK,🇭🇰 香港节点"
+    - "RULE-SET,ProxyJP,🇯🇵 日本节点"
+    - "RULE-SET,ProxySG,🇸🇬 狮城节点"
+    - "RULE-SET,LocalAreaNetwork,🎯 全球直连"
+    - "RULE-SET,UnBan,🎯 全球直连"
+    - "RULE-SET,BanAD,🛑 全球拦截"
+    - "RULE-SET,BanProgramAD,🍃 应用净化"
+    - "RULE-SET,Google,📢 Google"
+    - "RULE-SET,GoogleFCM,📢 Google"
+    - "RULE-SET,GoogleCN,🎯 全球直连"
+    - "RULE-SET,SteamCN,🎯 全球直连"
+    - "RULE-SET,YouTube,📹 YouTube"
+    - "RULE-SET,Bing,Ⓜ️ 微软服务"
+    - "RULE-SET,Microsoft,Ⓜ️ 微软服务"
+    - "RULE-SET,OneDrive,Ⓜ️ 微软服务"
+    - "RULE-SET,Apple,🍎 Apple"
+    - "RULE-SET,Telegram,📲 Telegram"
+    - "RULE-SET,OpenAi,🤖 OpenAI"
+    - "RULE-SET,Epic,🎮 游戏平台"
+    - "RULE-SET,Nintendo,🎮 游戏平台"
+    - "RULE-SET,Origin,🎮 游戏平台"
+    - "RULE-SET,Sony,🎮 游戏平台"
+    - "RULE-SET,Steam,🎮 游戏平台"
+    - "RULE-SET,Netflix,🎥 Netflix"
+    - "RULE-SET,NetflixIP,🎥 Netflix"
+    - "RULE-SET,ChinaMedia,🌏 国内媒体"
+    - "RULE-SET,ProxyMedia,🌍 国外媒体"
+    - "RULE-SET,ProxyGFWlist,🌍 国外媒体"
+    - "RULE-SET,TikTok,🎵 TikTok"
+    - "RULE-SET,ChinaIp,🎯 全球直连"
+    - "RULE-SET,ChinaDomain,🎯 全球直连"
+    - "RULE-SET,ChinaCompanyIp,🎯 全球直连"
+    - "RULE-SET,Download,🎯 全球直连"
+    - GEOIP,LAN,DIRECT
+    - GEOIP,CN,DIRECT
+    - MATCH,🐟 漏网之鱼
