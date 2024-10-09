@@ -7,12 +7,12 @@
 
 # 匹配域名后缀(交由Proxy代理服务器组)
 # DOMAIN-SUFFIX,perplexity.ai
-DOMAIN-SUFFIX,api.translate.zvo.cn
-DOMAIN-SUFFIX,docker.com
-DOMAIN-SUFFIX,4khdr.cn
-DOMAIN-SUFFIX,docker.com
-DOMAIN-SUFFIX,hub.docker.com
-DOMAIN-SUFFIX,registry-1.docker.io
-DOMAIN-SUFFIX,index.docker.io
-DOMAIN-SUFFIX,registry.hub.docker.com
-# DOMAIN-SUFFIX,services.googleapis.cn
+- DOMAIN-SUFFIX,api.translate.zvo.cn
+- DOMAIN-SUFFIX,docker.com
+- DOMAIN-SUFFIX,4khdr.cn
+- DOMAIN-SUFFIX,docker.com
+- DOMAIN-SUFFIX,hub.docker.com
+- DOMAIN-SUFFIX,registry-1.docker.io
+- DOMAIN-SUFFIX,index.docker.io
+- DOMAIN-SUFFIX,registry.hub.docker.com
+- DOMAIN-SUFFIX,services.googleapis.cn
