@@ -1,7 +1,8 @@
-# 内容：OpenAi Bard anthropic
-# 域名关键字匹配
-# DOMAIN-KEYWORD,openai
-
-# 域名后缀匹配
-DOMAIN-SUFFIX,share.dmhy.org
-DOMAIN-SUFFIX,www.1lou.info
+payload:
+  # 内容：OpenAi Bard anthropic
+  # 域名关键字匹配
+  # DOMAIN-KEYWORD,openai
+  
+  # 域名后缀匹配
+  DOMAIN-SUFFIX,share.dmhy.org
+  DOMAIN-SUFFIX,www.1lou.info
