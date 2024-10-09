@@ -9,6 +9,13 @@
 ##- DST-PORT,80,DIRECT #匹配数据目标端口(直连)
 ##- SRC-PORT,7777,DIRECT #匹配数据源端口(直连)
 
+# 本地下载设备IP
+SRC-IP-CIDR,192.168.50.39/32,no-resolve
+
+# play商店能正常浏览，其它网站也能流畅访问，但就是下载应用一直卡住
+# 解决方法：把以xn--ngstr-lra8j.com为后缀的域名走直链，这个域名会解析到国内ip，某些代理会出现无法下载应用的问题（常出现在hk,sg的节点上），把它走直连后下载走的国内，下载速度跑满物理带宽
+DOMAIN-SUFFIX,xn--ngstr-lra8j.com
+
 # 来源:https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.list
 - DOMAIN-SUFFIX,instant.arubanetworks.com
 - DOMAIN-SUFFIX,setmeup.arubanetworks.com
@@ -140,8 +147,3 @@
 - DOMAIN-SUFFIX,8.b.d.0.1.0.0.2.ip6.arpa
 - DOMAIN-SUFFIX,1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
 - DOMAIN-SUFFIX,0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
-
-
-# 本地下载设备IP
-SRC-IP-CIDR,192.168.50.39/32,no-resolve
-
