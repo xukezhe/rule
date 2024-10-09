@@ -15,4 +15,4 @@ DOMAIN-SUFFIX,hub.docker.com
 DOMAIN-SUFFIX,registry-1.docker.io
 DOMAIN-SUFFIX,index.docker.io
 DOMAIN-SUFFIX,registry.hub.docker.com
-DOMAIN-SUFFIX,services.googleapis.cn
+# DOMAIN-SUFFIX,services.googleapis.cn
