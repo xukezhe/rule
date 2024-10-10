@@ -13,11 +13,11 @@ payload:
   ##- SRC-PORT,7777,DIRECT #匹配数据源端口(直连)
 
   ##- IP-CIDR,127.0.0.0/8,DIRECT #匹配数据目标IP(直连)
-  - IP-CIDR,9.9.9.10,no-resolve
-  - IP-CIDR,9.9.9.11,no-resolve
-  - IP-CIDR,8.8.4.4,no-resolve
-  - IP-CIDR,1.1.1.1,no-resolve
-  - IP-CIDR,20.42.73.25,no-resolve
+  - IP-CIDR,9.9.9.10/8,no-resolve
+  - IP-CIDR,9.9.9.11/8,no-resolve
+  - IP-CIDR,8.8.4.4/8,no-resolve
+  - IP-CIDR,1.1.1.1/8,no-resolve
+  - IP-CIDR,20.42.73.25/8,no-resolve
 
   ##- DOMAIN-SUFFIX,google.com,Proxy #匹配域名后缀(交由Proxy代理服务器组)
   #- DOMAIN-SUFFIX,perplexity.ai
