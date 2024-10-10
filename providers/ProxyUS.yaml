@@ -6,3 +6,4 @@ payload:
   # 域名后缀匹配
   - DOMAIN-SUFFIX,share.dmhy.org
   - DOMAIN-SUFFIX,1lou.info
+  - DOMAIN-SUFFIX,api.mousegesturesapi.com
