@@ -1,9 +1,32 @@
 payload:
   # 内容：OpenAi Bard anthropic
-  # 域名关键字匹配
-  # DOMAIN-KEYWORD,openai
-  
+
+  # 指定本地设备走直连，避免偷跑代理流量
+  ##- PROCESS-NAME,curl,DIRECT #匹配路由自身进程(curl直连)
+  ##- DOMAIN-SUFFIX,google.com,Proxy #匹配域名后缀(交由Proxy代理服务器组)
+  ##- DOMAIN-KEYWORD,google,Proxy #匹配域名关键字(交由Proxy代理服务器组)
+  ##- DOMAIN,google.com,Proxy #匹配域名(交由Proxy代理服务器组)
+  ##- DOMAIN-SUFFIX,ad.com,REJECT #匹配域名后缀(拒绝)
+  ##- IP-CIDR,127.0.0.0/8,DIRECT #匹配数据目标IP(直连)
+  ##- SRC-IP-CIDR,192.168.1.201/32,DIRECT #匹配数据发起IP(直连)
+  ##- DST-PORT,80,DIRECT #匹配数据目标端口(直连)
+  ##- SRC-PORT,7777,DIRECT #匹配数据源端口(直连)
+
+  ##- IP-CIDR,127.0.0.0/8,DIRECT #匹配数据目标IP(直连)
+  - IP-CIDR,35.186.198.0/24,no-resolve
+  - IP-CIDR,142.250.69.0/24,no-resolve
+  - IP-CIDR,204.79.197.0/24,no-resolve
+  - IP-CIDR,142.250.69.0/24,no-resolve
+  - IP-CIDR,20.230.46.0/24,no-resolve
+  - IP-CIDR,142.251.215.0/24,no-resolve
+  - IP-CIDR,23.80.5.0/24,no-resolve
+  - IP-CIDR,140.82.113.0/24,no-resolve
+  - IP-CIDR,20.197.71.0/24,no-resolve
+  - IP-CIDR,38.90.226.0/24,no-resolve
+  - IP-CIDR,142.251.33.0/24,no-resolve
+
   # 域名后缀匹配
   - DOMAIN-SUFFIX,share.dmhy.org
   - DOMAIN-SUFFIX,1lou.info
   - DOMAIN-SUFFIX,api.mousegesturesapi.com
+  - DOMAIN-SUFFIX,ipify.org
