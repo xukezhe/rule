@@ -28,3 +28,4 @@ payload:
   - DOMAIN-SUFFIX,4khdr.cn
   - DOMAIN-SUFFIX,registry.hub.docker.com
   - DOMAIN-SUFFIX,services.googleapis.cn
+  - DOMAIN-SUFFIX,chronodownloader.net
