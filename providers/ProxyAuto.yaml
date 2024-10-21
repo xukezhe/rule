@@ -20,6 +20,7 @@ payload:
   - IP-CIDR,1.1.1.1/24,no-resolve
   - IP-CIDR,1.0.0.1/24,no-resolve
   - IP-CIDR,20.42.73.25/24,no-resolve
+  - IP-CIDR,91.228.167.0/8,no-resolve
 
   ##- DOMAIN-SUFFIX,google.com,Proxy #匹配域名后缀(交由Proxy代理服务器组)
   #- DOMAIN-SUFFIX,perplexity.ai
