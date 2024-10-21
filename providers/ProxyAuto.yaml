@@ -29,3 +29,8 @@ payload:
   - DOMAIN-SUFFIX,registry.hub.docker.com
   - DOMAIN-SUFFIX,services.googleapis.cn
   - DOMAIN-SUFFIX,chronodownloader.net
+
+  ##- 代理集
+  - DOMAIN-KEYWORD,lmscunb
+  - DOMAIN-KEYWORD,iggv5
+  - DOMAIN-KEYWORD,bnsubservdom
