@@ -23,7 +23,8 @@ payload:
   - DOMAIN-SUFFIX,4khdr.cn
   - DOMAIN-SUFFIX,chronodownloader.net
 
-  ##- 代理集
+  ##- 代理域名
   - DOMAIN-KEYWORD,lmscunb
   - DOMAIN-KEYWORD,iggv5
   - DOMAIN-KEYWORD,bnsubservdom
+  - DOMAIN-KEYWORD,mitce.com
