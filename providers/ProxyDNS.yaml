@@ -1,0 +1,83 @@
+payload:
+  # 内容：自定义接自动选择代理节点
+
+  # 指定本地设备走直连，避免偷跑代理流量
+  ##- PROCESS-NAME,curl,DIRECT #匹配路由自身进程(curl直连)
+  ##- DOMAIN-SUFFIX,google.com,Proxy #匹配域名后缀(交由Proxy代理服务器组)
+  ##- DOMAIN-KEYWORD,google,Proxy #匹配域名关键字(交由Proxy代理服务器组)
+  ##- DOMAIN,google.com,Proxy #匹配域名(交由Proxy代理服务器组)
+  ##- DOMAIN-SUFFIX,ad.com,REJECT #匹配域名后缀(拒绝)
+  ##- IP-CIDR,127.0.0.0/8,DIRECT #匹配数据目标IP(直连)
+  ##- SRC-IP-CIDR,192.168.1.201/32,DIRECT #匹配数据发起IP(直连)
+  ##- DST-PORT,80,DIRECT #匹配数据目标端口(直连)
+  ##- SRC-PORT,7777,DIRECT #匹配数据源端口(直连)
+
+    ##- IP-CIDR,127.0.0.0/8,DIRECT #匹配数据目标IP(直连)
+  - IP-CIDR,9.9.9.10/24,no-resolve
+  - IP-CIDR,9.9.9.11/24,no-resolve
+  - IP-CIDR,8.8.8.8/24,no-resolve
+  - IP-CIDR,8.8.4.4/24,no-resolve
+  - IP-CIDR,1.1.1.1/24,no-resolve
+  - IP-CIDR,1.0.0.1/24,no-resolve
+  - IP-CIDR,1.1.1.2,no-resolve
+  - IP-CIDR,1.0.0.2,no-resolve
+  - IP-CIDR,1.1.1.3,no-resolve
+  - IP-CIDR,1.0.0.3,no-resolve
+  - IP-CIDR,9.9.9.9,no-resolve
+  - IP-CIDR,149.112.112.112,no-resolve
+  - IP-CIDR,149.112.112.9,no-resolve
+  - IP-CIDR,185.222.222.222,no-resolve
+  - IP-CIDR,45.11.45.11,no-resolve
+  - IP-CIDR,208.67.220.220,no-resolve
+  - IP-CIDR,208.67.222.220,no-resolve
+  - IP-CIDR,208.67.222.220,no-resolve
+  - IP-CIDR,208.67.220.222,no-resolve
+  - IP-CIDR,208.67.222.123,no-resolve
+  - IP-CIDR,208.67.220.123,no-resolve
+  - IP-CIDR,77.88.8.8,no-resolve
+  - IP-CIDR,77.88.8.1,no-resolve
+  - IP-CIDR,77.88.8.88,no-resolve
+  - IP-CIDR,77.88.8.2,no-resolve
+  - IP-CIDR,77.88.8.7,no-resolve
+  - IP-CIDR,77.88.8.3,no-resolve
+  - IP-CIDR,8.26.56.26,no-resolve
+  - IP-CIDR,8.26.247.20,no-resolve
+  - IP-CIDR,64.6.64.6,no-resolve
+  - IP-CIDR,64.6.65.6,no-resolve
+  - IP-CIDR,156.154.70.2,no-resolve
+  - IP-CIDR,156.154.71.2,no-resolve
+  - IP-CIDR,94.140.14.14,no-resolve
+  - IP-CIDR,94.140.15.15,no-resolve
+  - IP-CIDR,94.140.14.140,no-resolve
+  - IP-CIDR,94.140.14.141,no-resolve
+  - IP-CIDR,94.140.14.15,no-resolve
+  - IP-CIDR,94.140.15.16,no-resolve
+  - IP-CIDR,4.2.2.1,no-resolve
+  - IP-CIDR,4.2.2.2,no-resolve
+  - IP-CIDR,4.2.2.3,no-resolve
+  - IP-CIDR,4.2.2.4,no-resolve
+  - IP-CIDR,4.2.2.5,no-resolve
+  - IP-CIDR,4.2.2.6,no-resolve
+  - IP-CIDR,80.80.80.80,no-resolve
+  - IP-CIDR,80.80.81.81,no-resolve
+
+  ##- DOMAIN-SUFFIX,google.com,Proxy #匹配域名后缀(交由Proxy代理服务器组)
+  #- DOMAIN-SUFFIX,perplexity.ai
+  - DOMAIN-SUFFIX,https://dns.google/dns-query
+  - DOMAIN-SUFFIX,cloudflare-dns.com
+  - DOMAIN-SUFFIX,one.one.one.one
+  - DOMAIN-SUFFIX,dns.quad9.net
+  - DOMAIN-SUFFIX,doh.dns.sb
+  - DOMAIN-SUFFIX,doh.sb
+  - DOMAIN-SUFFIX,dot.sb
+  - DOMAIN-SUFFIX,dns.sb
+  - DOMAIN-SUFFIX,dns.opendns.com
+  - DOMAIN-SUFFIX,dns.umbrella.com
+  - DOMAIN-SUFFIX,dns.sse.cisco.com
+  - DOMAIN-SUFFIX,familyshield.opendns.com
+  - DOMAIN-SUFFIX,familyshield.sse.cisco.com
+  - DOMAIN-SUFFIX,common.dot.dns.yandex.net
+  - DOMAIN-SUFFIX,family.dot.dns.yandex.net
+  - DOMAIN-SUFFIX,dns.adguard-dns.com
+  - DOMAIN-SUFFIX,unfiltered.adguard-dns.com
+  - DOMAIN-SUFFIX,family.adguard-dns.com
