@@ -25,6 +25,6 @@ payload:
 
   ##- 代理域名
   - DOMAIN-KEYWORD,lmscunb
-  - DOMAIN-KEYWORD,iggv5
+  #- DOMAIN-KEYWORD,iggv5
   - DOMAIN-KEYWORD,bnsubservdom
   - DOMAIN-KEYWORD,mitce.com
