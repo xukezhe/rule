@@ -63,7 +63,7 @@ payload:
 
   ##- DOMAIN-SUFFIX,google.com,Proxy #匹配域名后缀(交由Proxy代理服务器组)
   #- DOMAIN-SUFFIX,perplexity.ai
-  - DOMAIN-SUFFIX,https://dns.google/dns-query
+  - DOMAIN-SUFFIX,dns.google
   - DOMAIN-SUFFIX,cloudflare-dns.com
   - DOMAIN-SUFFIX,one.one.one.one
   - DOMAIN-SUFFIX,dns.quad9.net
