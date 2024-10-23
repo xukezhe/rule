@@ -1,18 +1,17 @@
 payload:
   # 内容：自定义接自动选择代理节点
 
-  # 指定本地设备走直连，避免偷跑代理流量
-  ##- PROCESS-NAME,curl,DIRECT #匹配路由自身进程(curl直连)
-  ##- DOMAIN-SUFFIX,google.com,Proxy #匹配域名后缀(交由Proxy代理服务器组)
-  ##- DOMAIN-KEYWORD,google,Proxy #匹配域名关键字(交由Proxy代理服务器组)
-  ##- DOMAIN,google.com,Proxy #匹配域名(交由Proxy代理服务器组)
-  ##- DOMAIN-SUFFIX,ad.com,REJECT #匹配域名后缀(拒绝)
-  ##- IP-CIDR,127.0.0.0/8,DIRECT #匹配数据目标IP(直连)
-  ##- SRC-IP-CIDR,192.168.1.201/32,DIRECT #匹配数据发起IP(直连)
-  ##- DST-PORT,80,DIRECT #匹配数据目标端口(直连)
-  ##- SRC-PORT,7777,DIRECT #匹配数据源端口(直连)
+  #- PROCESS-NAME,curl,DIRECT #匹配路由自身进程(curl直连)
+  #- DOMAIN-SUFFIX,google.com,Proxy #匹配域名后缀(交由Proxy代理服务器组)
+  #- DOMAIN-KEYWORD,google,Proxy #匹配域名关键字(交由Proxy代理服务器组)
+  #- DOMAIN,google.com,Proxy #匹配域名(交由Proxy代理服务器组)
+  #- DOMAIN-SUFFIX,ad.com,REJECT #匹配域名后缀(拒绝)
+  #- IP-CIDR,127.0.0.0/8,DIRECT #匹配数据目标IP(直连)
+  #- SRC-IP-CIDR,192.168.1.201/32,DIRECT #匹配数据发起IP(直连)
+  #- DST-PORT,80,DIRECT #匹配数据目标端口(直连)
+  #- SRC-PORT,7777,DIRECT #匹配数据源端口(直连)
 
-    ##- IP-CIDR,127.0.0.0/8,DIRECT #匹配数据目标IP(直连)
+  #- IP-CIDR,127.0.0.0/8,DIRECT #匹配数据目标IP(直连)
   - IP-CIDR,9.9.9.10/24,no-resolve
   - IP-CIDR,9.9.9.11/24,no-resolve
   - IP-CIDR,8.8.8.8/24,no-resolve
@@ -61,7 +60,7 @@ payload:
   - IP-CIDR,80.80.80.80,no-resolve
   - IP-CIDR,80.80.81.81,no-resolve
 
-  ##- DOMAIN-SUFFIX,google.com,Proxy #匹配域名后缀(交由Proxy代理服务器组)
+  #- DOMAIN-SUFFIX,google.com,Proxy #匹配域名后缀(交由Proxy代理服务器组)
   #- DOMAIN-SUFFIX,perplexity.ai
   - DOMAIN-SUFFIX,dns.google
   - DOMAIN-SUFFIX,cloudflare-dns.com
