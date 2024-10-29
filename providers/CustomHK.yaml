@@ -11,10 +11,15 @@ payload:
   #- SRC-PORT,7777,DIRECT #匹配数据源端口(直连)
   
   # 匹配域名关键字(交由Proxy代理服务器组)
-  # DOMAIN-KEYWORD,openai
+  #-  DOMAIN-KEYWORD,openai
   
   #- IP-CIDR,47.76.0.0/16,DIRECT #匹配数据目标IP(直连)
   - IP-CIDR,20.205.69.80/24,no-resolve
   
   # 匹配域名后缀(交由Proxy代理服务器组)
-  # DOMAIN-SUFFIX,perplexity.ai
+  #- DOMAIN-SUFFIX,perplexity.ai
+  - DOMAIN-SUFFIX,lmspeed.co
+  - DOMAIN-SUFFIX,lmweb01.lmspeed.pro
+  - DOMAIN-SUFFIX,www.saidun.today
+  - DOMAIN-SUFFIX,la05.speedcat.one
+  - DOMAIN-SUFFIX,api.saidun.life
