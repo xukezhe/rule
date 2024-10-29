@@ -23,6 +23,7 @@ payload:
   - IP-CIDR,20.197.71.0/24,no-resolve
   - IP-CIDR,38.90.226.0/24,no-resolve
   - IP-CIDR,142.251.33.0/24,no-resolve
+  - IP-CIDR,20.189.173.12/24,no-resolve
 
   # 域名后缀匹配
   - DOMAIN-SUFFIX,share.dmhy.org
