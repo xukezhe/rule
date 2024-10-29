@@ -32,3 +32,9 @@ payload:
   - DOMAIN-SUFFIX,ipify.org
   - DOMAIN-SUFFIX,gitbook.io
   - DOMAIN-SUFFIX,weatheroffer.com
+  - DOMAIN-SUFFIX,manifests.acdsystems.com
+  - DOMAIN-SUFFIX,r.acdsee.com
+  - DOMAIN-SUFFIX,res-acdid.acdsystems.com
+  - DOMAIN-SUFFIX,ads.cloudcaise.com
+  - DOMAIN-SUFFIX,dwhapi-v2.data4game.com
+  - DOMAIN-SUFFIX,events.ads.vungle.com
