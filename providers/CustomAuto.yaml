@@ -21,6 +21,8 @@ payload:
   - DOMAIN-SUFFIX,docker.com
   - DOMAIN-SUFFIX,4khdr.cn
   - DOMAIN-SUFFIX,chronodownloader.net
+  - DOMAIN-SUFFIX,a.listary.com
+  - DOMAIN-SUFFIX,cdn-lb.vungle.com
 
   # 代理域名
   - DOMAIN-KEYWORD,lmscunb
