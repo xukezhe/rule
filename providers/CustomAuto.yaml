@@ -24,6 +24,9 @@ payload:
   - DOMAIN-SUFFIX,a.listary.com
   - DOMAIN-SUFFIX,cdn-lb.vungle.com
 
+  # 德国域名
+  - DOMAIN-SUFFIX,fota-cloud-dn.ospserver.net
+  
   # 代理域名
   - DOMAIN-KEYWORD,lmscunb
   #- DOMAIN-KEYWORD,iggv5
