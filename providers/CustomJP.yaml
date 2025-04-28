@@ -8,3 +8,4 @@ payload:
   # 匹配域名后缀(交由Proxy代理服务器组)
   # - DOMAIN-SUFFIX,perplexity.ai
   - DOMAIN-SUFFIX,jp.tao
+  - DOMAIN-SUFFIX,amazon.co.jp
