@@ -1,2 +1,6 @@
 payload:
   # 走直连
+
+  # 域名后缀匹配
+  - DOMAIN-SUFFIX,bloxd.io
+
