@@ -1,3 +1,15 @@
+# Providers 文件注释
+# Private rules
+  - "RULE-SET,CustomDNS,🌍 国外媒体"
+  - "RULE-SET,CustomDevice,🎯 全球直连" PS：即直连
+  - "RULE-SET,CustomAuto,♻️ 自动选择"
+  - "RULE-SET,CustomManual,🔰 节点选择"
+  - "RULE-SET,CustomUS,🇺🇲 美国节点"
+  - "RULE-SET,CustomHK,🇭🇰 香港节点"
+  - "RULE-SET,CustomJP,🇯🇵 日本节点"
+  - "RULE-SET,CustomSG,🇸🇬 狮城节点"
+
+
 # rule
 
 # 规则
