@@ -40,3 +40,5 @@ payload:
   - DOMAIN-SUFFIX,events.ads.vungle.com
   - DOMAIN-SUFFIX,bing.img.run
   - DOMAIN-SUFFIX,truthsocial.com
+  - DOMAIN-SUFFIX,time.windows.com
+  - DOMAIN-SUFFIX,time.nist.gov
