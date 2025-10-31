@@ -23,6 +23,7 @@ payload:
   
   # 来源:https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.list
   # 域名后缀匹配
+  - DOMAIN-SUFFIX,paypal.com/c2/home
   - DOMAIN-SUFFIX,jd.hk
   - DOMAIN-SUFFIX,bloxd.io
   - DOMAIN-SUFFIX,instant.arubanetworks.com
