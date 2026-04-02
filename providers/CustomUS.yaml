@@ -43,3 +43,4 @@ payload:
   - DOMAIN-SUFFIX,time.windows.com
   - DOMAIN-SUFFIX,time.nist.gov
   - DOMAIN-SUFFIX,reddit.com
+  - DOMAIN-SUFFIX,anthropic.com
