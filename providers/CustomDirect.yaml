@@ -13,6 +13,8 @@ payload:
 
   # 讓所有 123 端口（NTP 時間同步專用端口）的流量全部直連，不走節點
   - DST-PORT,123
+  - SRC-PORT,123
+
   # ESET
   - DOMAIN-SUFFIX,eset.com
   
