@@ -16,7 +16,7 @@ payload:
   - SRC-PORT,123
 
   # ESET
-  - DOMAIN-SUFFIX,eset.com
+  #- DOMAIN-SUFFIX,eset.com
   
   # 本地下载设备IP
   SRC-IP-CIDR,192.168.50.39/32,no-resolve
