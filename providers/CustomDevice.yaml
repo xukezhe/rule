@@ -12,7 +12,7 @@ payload:
   #- SRC-PORT,7777,DIRECT #匹配数据源端口(直连)
 
   # ESET
-  - DOMAIN-SUFFIX,eset.com
+  #- DOMAIN-SUFFIX,eset.com
   
   # 本地下载设备IP
   SRC-IP-CIDR,192.168.50.39/32,no-resolve
