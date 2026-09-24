@@ -11,6 +11,9 @@ payload:
   #- DST-PORT,80,DIRECT #匹配数据目标端口(直连)
   #- SRC-PORT,7777,DIRECT #匹配数据源端口(直连)
 
+  # 自有域名
+  - DOMAIN-SUFFIX,nasprivate.top
+
   # 讓所有 123 端口（NTP 時間同步專用端口）的流量全部直連，不走節點
   - DST-PORT,123
   - SRC-PORT,123
