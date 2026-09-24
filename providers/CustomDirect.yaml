@@ -21,11 +21,11 @@ payload:
   - DOMAIN-SUFFIX,eset.systems
   
   # 本地下载设备IP
-  SRC-IP-CIDR,192.168.50.39/32,no-resolve
+  #SRC-IP-CIDR,192.168.50.39/32,no-resolve
   
   # play商店能正常浏览，其它网站也能流畅访问，但就是下载应用一直卡住
   # 解决方法：把以xn--ngstr-lra8j.com为后缀的域名走直链，这个域名会解析到国内ip，某些代理会出现无法下载应用的问题（常出现在hk,sg的节点上），把它走直连后下载走的国内，下载速度跑满物理带宽
-  DOMAIN-SUFFIX,xn--ngstr-lra8j.com
+  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com
   
   # 来源:https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.list
   # 域名后缀匹配
