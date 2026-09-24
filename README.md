@@ -2,19 +2,20 @@
 # Private rules
   - Custom_Reject.yaml 🍃 净化环境
   - Custom_Direct.yaml 🎯 全球直连
-  - Custom_Private.yaml 🎯 全球直连 // 仅包含域名
   - Custom_IP.yaml 🎯 全球直连 // 仅包含IP
   - Custom_Proxy.yaml 🌍 全球代理
   - Custom_Manual.yaml 🔰 节点选择
+  - Private_Domain.yaml 🎯 全球直连
+  - Private_IP.yaml 🎯 全球直连
 
-  - Custom_DNS.yaml 🌍 全球代理 // PS：不使用
-  - CustomAuto.yaml ♻️ 自动选择 // 已删除
 
+  - Custom_CN.yaml 🎯 全球直连
   - Custom_US.yaml 🇺🇲 美国节点
   - Custom_HK.yaml 🇭🇰 香港节点
   - Custom_JP.yaml 🇯🇵 日本节点
   - Custom_SG.yaml 🇸🇬 狮城节点
 
+  - Custom_DNS.yaml 🌍 全球代理 // PS：不使用
 
 # rule
 
