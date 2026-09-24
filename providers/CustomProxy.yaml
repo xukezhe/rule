@@ -17,3 +17,25 @@ payload:
   # eset 走代理部分 或者直接讓整個 eset 走代理（推薦，因為 ESET 很多伺服器在國外）
   #- DOMAIN,epns.eset.com
   #- DOMAIN-KEYWORD,eset
+
+  #- IP-CIDR,127.0.0.0/8,DIRECT #匹配数据目标IP(直连)
+  - IP-CIDR,20.42.73.25/24,no-resolve
+  - IP-CIDR,91.228.167.0/8,no-resolve
+
+  #- DOMAIN-SUFFIX,google.com,Proxy #匹配域名后缀(交由Proxy代理服务器组)
+  #- DOMAIN-SUFFIX,perplexity.ai
+  - DOMAIN-SUFFIX,api.translate.zvo.cn
+  - DOMAIN-SUFFIX,docker.com
+  - DOMAIN-SUFFIX,4khdr.cn
+  - DOMAIN-SUFFIX,chronodownloader.net
+  - DOMAIN-SUFFIX,a.listary.com
+  - DOMAIN-SUFFIX,cdn-lb.vungle.com
+
+  # 德国域名
+  - DOMAIN-SUFFIX,fota-cloud-dn.ospserver.net
+  
+  # 代理域名
+  - DOMAIN-KEYWORD,lmscunb
+  #- DOMAIN-KEYWORD,iggv5
+  - DOMAIN-KEYWORD,bnsubservdom
+  - DOMAIN-KEYWORD,mitce.com
