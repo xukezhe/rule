@@ -13,3 +13,6 @@ payload:
 
   # 自有域名
   - DOMAIN-SUFFIX,nasprivate.top
+
+  # 本地下载设备IP
+  - SRC-IP-CIDR,192.168.50.88/32,no-resolve
