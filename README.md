@@ -4,9 +4,6 @@
   - Custom_Direct.yaml 🎯 全球直连
   - Custom_Proxy.yaml 🌍 全球代理
   - Custom_Manual.yaml 🔰 节点选择
-  - Private_Domain.yaml 🎯 全球直连 // 仅包含域名
-  - Private_IP.yaml 🎯 全球直连 // 仅包含IP
-
 
   - Custom_CN.yaml 🎯 全球直连
   - Custom_TW.yaml 🇨🇳 台湾节点 // 🇹🇼
@@ -14,6 +11,9 @@
   - Custom_HK.yaml 🇭🇰 香港节点
   - Custom_JP.yaml 🇯🇵 日本节点
   - Custom_SG.yaml 🇸🇬 狮城节点
+
+  - Private_Domain.yaml 🎯 全球直连 // 仅包含域名
+  - Private_IP.yaml 🎯 全球直连 // 仅包含IP
 
   - Custom_DNS.yaml 🌍 全球代理 // PS：不使用
 
