@@ -31,8 +31,8 @@ payload:
   - DOMAIN-SUFFIX,a.listary.com
   - DOMAIN-SUFFIX,cdn-lb.vungle.com
   # FT中文網
-  - DOMAIN-SUFFIX,ftchinese.com,Proxy
-  - DOMAIN-SUFFIX,ft.com,Proxy
+  - DOMAIN-SUFFIX,ftchinese.com
+  - DOMAIN-SUFFIX,ft.com
 
   # GitHub 代理地址
   - DOMAIN-SUFFIX,fastly.jsdelivr.net
