@@ -32,9 +32,11 @@ payload:
   - DOMAIN-SUFFIX,chronodownloader.net
   - DOMAIN-SUFFIX,a.listary.com
   - DOMAIN-SUFFIX,cdn-lb.vungle.com
+
   # FT中文網
   - DOMAIN-SUFFIX,ftchinese.com
   - DOMAIN-SUFFIX,ft.com
+  - DOMAIN-KEYWORD,ftimg
 
   # GitHub 代理地址
   - DOMAIN-SUFFIX,fastly.jsdelivr.net
