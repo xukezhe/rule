@@ -10,3 +10,4 @@ payload:
   - DOMAIN-SUFFIX,co.jp
   - DOMAIN-SUFFIX,jp
   - DOMAIN-SUFFIX,jp.tao
+  - DOMAIN-SUFFIX,slack.com
