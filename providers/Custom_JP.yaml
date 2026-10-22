@@ -10,6 +10,7 @@ payload:
   - DOMAIN-SUFFIX,co.jp
   - DOMAIN-SUFFIX,jp
   - DOMAIN-SUFFIX,jp.tao
+  - DOMAIN-KEYWORD,slack
   - DOMAIN-SUFFIX,slack.com
-  - DOMAIN-SUFFIX,simeji
+  - DOMAIN-KEYWORD,simeji
   - DOMAIN-SUFFIX,simeji.me
