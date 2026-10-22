@@ -11,3 +11,5 @@ payload:
   - DOMAIN-SUFFIX,jp
   - DOMAIN-SUFFIX,jp.tao
   - DOMAIN-SUFFIX,slack.com
+  - DOMAIN-SUFFIX,simeji
+  - DOMAIN-SUFFIX,simeji.me
