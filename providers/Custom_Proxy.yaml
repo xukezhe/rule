@@ -54,6 +54,8 @@ payload:
   - DOMAIN-SUFFIX,gh.monlor.com
   - DOMAIN-SUFFIX,gh.idayer.com
 
+  # IP SB 查询
+  - DOMAIN,ip.sb
 
   # 德国域名
   - DOMAIN-SUFFIX,fota-cloud-dn.ospserver.net
